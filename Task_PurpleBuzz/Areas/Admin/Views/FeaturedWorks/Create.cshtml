@@ -1,0 +1,35 @@
+﻿@using Task_PurpleBuzz.Areas.Admin.ViewModels.FeaturedWorksComponent;
+@model FeaturedWorksCreateVM
+
+<!-- Begin Page Content -->
+<div class="container-fluid">
+
+    <!-- Page Heading -->
+    <h1 class="h3 mb-2 text-gray-800">Create Featured Works Components</h1>
+
+    <!-- DataTales Example -->
+    <div class="card shadow mb-4">
+        <div class="card-body">
+            <form asp-action="create" asp-controller="featuredworks" method="post">
+                <div class="form-group">
+                    <label asp-for="Title"></label>
+                    <input class="form-control" asp-for="Title" />
+                    <span asp-validation-for="Title"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Substring"></label>
+                    <input class="form-control" asp-for="Substring" />
+                    <span asp-validation-for="Substring"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Description"></label>
+                    <textarea class="form-control" asp-for="Description"></textarea>
+                    <span asp-validation-for="Description"></span>
+                </div>
+                <button type="submit" class="btn btn-primary">Create</button>
+            </form>
+        </div>
+    </div>
+
+</div>
+<!-- /.container-fluid -->

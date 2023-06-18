@@ -1,0 +1,23 @@
+﻿@using Task_PurpleBuzz.Areas.Admin.ViewModels.Works;
+@model WorkDetailsVM
+
+<div class="m-4 form-group">
+	<a class="btn btn-primary" asp-action="index" asp-controller="work">Return to list</a>
+	<h1>Title</h1>
+	<p>@Model.Title</p>
+	<br />
+	<h1>Category</h1>
+	<p>@Model.WorkCategory.Name</p>
+	<br />
+	<h1>Description</h1>
+	<p>@Model.Desc</p>
+	<br />
+	<h1>Image Link</h1>
+	<p>@Model.ImgPath</p>
+	<br />
+	<h1>Created At</h1>
+	<p>@Model.CreatedAt.ToString("dd.MM.yyyy HH:mm:ss")</p>
+	<br />
+	<h1>Modified At</h1>
+	<p>@Model.ModifiedAt?.ToString("dd.MM.yyyy HH:mm:ss")</p>
+</div>

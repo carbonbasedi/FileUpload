@@ -1,0 +1,35 @@
+﻿@using Task_PurpleBuzz.Areas.Admin.ViewModels.ServiceComponent;
+@model ServiceComponentCreateVM
+
+                <!-- Begin Page Content -->
+<div class="container-fluid">
+
+    <!-- Page Heading -->
+    <h1 class="h3 mb-2 text-gray-800">Create Service Components</h1>
+
+    <!-- DataTales Example -->
+    <div class="card shadow mb-4">
+        <div class="card-body">
+            <form asp-action="create" asp-controller="servicecomponent" method="post">
+                <div class="form-group">
+                    <label asp-for="Title"></label>
+                    <input class="form-control" asp-for="Title" />
+                    <span asp-validation-for="Title"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Subtitle"></label>
+                    <input class="form-control" asp-for="Subtitle" />
+                    <span asp-validation-for="Subtitle"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Desc"></label>
+                    <textarea class="form-control" asp-for="Desc"></textarea>
+                    <span asp-validation-for="Desc"></span>
+                </div>
+                <button type="submit" class="btn btn-primary">Create</button>
+            </form>
+        </div>
+    </div>
+
+</div>
+<!-- /.container-fluid -->

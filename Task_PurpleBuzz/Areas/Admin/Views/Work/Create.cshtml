@@ -1,0 +1,42 @@
+﻿@using Task_PurpleBuzz.Areas.Admin.ViewModels.Works;
+@model WorkCreateVM
+
+<!-- Begin Page Content -->
+<div class="container-fluid">
+
+    <!-- Page Heading -->
+    <h1 class="h3 mb-2 text-gray-800">Create Work</h1>
+
+    <!-- DataTales Example -->
+    <div class="card shadow mb-4">
+        <div class="card-body">
+            <form asp-action="create" asp-controller="work" method="post">
+                <div class="form-group">
+                    <label asp-for="Title"></label>
+                    <input class="form-control" asp-for="Title" />
+                    <span asp-validation-for="Title"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="WorkCategoryId"></label>
+                    <select class="form-control form-select" asp-for="WorkCategoryId" asp-items="Model.WorkCategories">
+                        <option value="">-- Choose --</option>
+                    </select>
+                    <span asp-validation-for="Title"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Desc"></label>
+                    <input class="form-control" asp-for="Desc" />
+                    <span asp-validation-for="Desc"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="ImgPath"></label>
+                    <input class="form-control" asp-for="ImgPath" />
+                    <span asp-validation-for="ImgPath"></span>
+                </div>
+                <button type="submit" class="btn btn-primary">Create</button>
+            </form>
+        </div>
+    </div>
+
+</div>
+<!-- /.container-fluid -->

@@ -1,0 +1,49 @@
+﻿@using Task_PurpleBuzz.Areas.Admin.ViewModels.FeaturedWorksComponent
+@model FeaturedWorksIndexVM
+
+<!-- Begin Page Content -->
+<div class="container-fluid">
+	<!-- Page Heading -->
+	<h1 class="h3 mb-2 text-gray-800">Featured Works Components</h1>
+	<a class="btn btn-primary" asp-action="create" asp-controller="featuredworks">Create</a>
+	<!-- DataTales Example -->
+	<div class="card shadow mb-4">
+		<div class="card-body">
+			<div class="table-responsive">
+				<table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+					<thead>
+						<tr>
+							<th>Title</th>
+							<th>Subtitle</th>
+							<th>Active</th>
+							<th>Actions</th>
+						</tr>
+					</thead>
+					<tbody>
+						@foreach (var featuredWork in Model.FeaturedWorkComponents)
+						{
+							<tr>
+								<td>@featuredWork.Title</td>
+								<td>@featuredWork.Substring</td>
+								<td>
+									@if(!@featuredWork.IsDeleted)
+									{
+										<span class="text-success">Active</span>
+									}
+									else
+									{
+										<span class="text-danger">Deactive</span>
+									}
+									</td>
+								<td>
+									<a class="btn btn-info" asp-action="details" asp-controller="featuredworks" asp-route-id="@featuredWork.Id" >Details</a>
+								</td>
+							</tr>
+						}
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- /.container-fluid -->

@@ -1,0 +1,44 @@
+﻿@using Task_PurpleBuzz.Areas.Admin.ViewModels.HomeSliderInfo
+@model HomeSliderInfoIndexVM
+
+<!-- Begin Page Content -->
+<div class="container-fluid">
+	<!-- Page Heading -->
+	<h1 class="h3 mb-2 text-gray-800">Works</h1>
+	<a class="btn btn-primary m-3" asp-action="create" asp-controller="homesliderinfo">Create</a>
+	<!-- DataTales Example -->
+	<div class="card shadow mb-4">
+		<div class="card-body">
+			<div class="table-responsive">
+				<table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+					<thead>
+						<tr>
+							<th>Title</th>
+							<th>Category</th>
+							<th>Created At</th>
+							<th>Modified At</th>
+							<th>Actions</th>
+						</tr>
+					</thead>
+					<tbody>
+						@foreach (var homeSliderInfo in Model.HomeSliderInfos)
+						{
+							<tr>
+								<td>@homeSliderInfo.Title</td>
+								<td>@homeSliderInfo.HomeSlider.Title</td>
+								<td>@homeSliderInfo.CreatedAt.ToString("dd.MM.yyyy HH:mm:ss")</td>
+								<td>@homeSliderInfo.ModifiedAt?.ToString("dd.MM.yyyy HH:mm:ss")</td>
+								<td>
+									@if (!homeSliderInfo.IsDeleted)
+									{
+										<a asp-action="update" asp-controller="homesliderinfo" asp-route-id="@homeSliderInfo.Id" class="btn btn-primary">Update</a>
+										<a onclick="return DeleteConfirmation()" asp-action="delete" asp-controller="homesliderinfo" asp-route-id="@homeSliderInfo.Id" class="btn btn-danger">Delete</a>
+									}
+									<a asp-action="details" asp-controller="homesliderinfo" asp-route-id="@homeSliderInfo.Id" class="btn btn-info">Details</a>
+								</td>
+							</tr>
+						}
+					</tbody>
+				</table>
+			</div>
+		</div>

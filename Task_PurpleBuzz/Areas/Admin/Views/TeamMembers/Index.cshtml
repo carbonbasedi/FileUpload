@@ -1,0 +1,47 @@
+﻿@using Task_PurpleBuzz.Areas.Admin.ViewModels.TeamMembers
+@model TeamMemberIndexVM
+
+<!-- Begin Page Content -->
+<div class="container-fluid">
+	<!-- Page Heading -->
+	<h1 class="h3 mb-2 text-gray-800">Team Members</h1>
+	<a class="btn btn-primary" asp-action="create" asp-controller="teammembers">Create</a>
+	<!-- DataTales Example -->
+	<div class="card shadow mb-4">
+		<div class="card-body">
+			<div class="table-responsive">
+				<table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+					<thead>
+						<tr>
+							<th>Name</th>
+							<th>Occupancy</th>
+							<th>Created At</th>
+							<th>Modified At</th>
+							<th>Actions</th>
+						</tr>
+					</thead>
+					<tbody>
+						@foreach (var teamMember in Model.TeamMembers)
+						{
+							<tr>
+								<td>@teamMember.Name</td>
+								<td>@teamMember.Occupancy</td>
+								<td>@teamMember.CreatedAt.ToString("dd.MM.yyyy HH:mm:ss")</td>
+								<td>@teamMember.ModifiedAt?.ToString("dd.MM.yyyy HH:mm:ss")</td>
+								<td>
+									@if (!teamMember.IsDeleted)
+									{
+										<a asp-action="update" asp-controller="teammembers" asp-route-id="@teamMember.Id" class="btn btn-primary">Update</a>
+										<a onclick="return DeleteConfirmation()" asp-action="delete" asp-controller="teammembers" asp-route-id="@teamMember.Id" class="btn btn-danger">Delete</a>
+									}
+									<a asp-action="details" asp-controller="teammembers" asp-route-id="@teamMember.Id" class="btn btn-info">Details</a>
+								</td>
+							</tr>
+						}
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- /.container-fluid -->

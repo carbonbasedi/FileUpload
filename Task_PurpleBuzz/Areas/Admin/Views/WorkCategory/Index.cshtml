@@ -1,0 +1,56 @@
+﻿@using Task_PurpleBuzz.Areas.Admin.ViewModels.WorkCategory
+@model WorkCategoryIndexVM
+
+<!-- Begin Page Content -->
+<div class="container-fluid">
+	<!-- Page Heading -->
+	<h1 class="h3 mb-2 text-gray-800">Work Categories</h1>
+	<a class="btn btn-primary" asp-action="create" asp-controller="workcategory">Create</a>
+	<!-- DataTales Example -->
+	<div class="card shadow mb-4">
+		<div class="card-body">
+			<div class="table-responsive">
+				<table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+					<thead>
+						<tr>
+							<th>Name</th>
+							<th>Created At</th>
+							<th>Modified At</th>
+							<th>Status</th>
+							<th>Actions</th>
+						</tr>
+					</thead>
+					<tbody>
+						@foreach (var workCategory in Model.WorkCategories)
+						{
+							<tr>
+								<td>@workCategory.Name</td>
+								<td>@workCategory.CreatedAt.ToString("dd.MM.yyyy HH:mm:ss")</td>
+								<td>@workCategory.ModifiedAt?.ToString("dd.MM.yyyy HH:mm:ss")</td>
+								<td>
+									@if (workCategory.IsDeleted)
+									{
+										<span class="text-danger">Deleted</span>
+									}
+									else
+									{
+										<span class="text-success">Active</span>
+									}
+								</td>
+								<td>
+									@if (!workCategory.IsDeleted)
+									{
+										<a asp-action="update" asp-controller="workcategory" asp-route-id="@workCategory.Id" class="btn btn-primary">Update</a>
+										<a onclick="return DeleteConfirmation()" asp-action="delete" asp-controller="workcategory" asp-route-id="@workCategory.Id" class="btn btn-danger">Delete</a>
+									}
+									<a asp-action="details" asp-controller="workcategory" asp-route-id="@workCategory.Id" class="btn btn-info">Details</a>
+								</td>
+							</tr>
+						}
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- /.container-fluid -->

@@ -1,0 +1,48 @@
+﻿@using Task_PurpleBuzz.Areas.Admin.ViewModels.ServiceComponent
+@model ServiceComponentIndexVM
+
+<!-- Begin Page Content -->
+<div class="container-fluid">
+	<!-- Page Heading -->
+	<h1 class="h3 mb-2 text-gray-800">Service Components</h1>
+	<a class="btn btn-primary" asp-action="create" asp-controller="servicecomponent">Create</a>
+	<!-- DataTales Example -->
+	<div class="card shadow mb-4">
+		<div class="card-body">
+			<div class="table-responsive">
+				<table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+					<thead>
+						<tr>
+							<th>Title</th>
+							<th>Subtitle</th>
+							<th>Active</th>
+							<th>Actions</th>
+						</tr>
+					</thead>
+					<tbody>
+						@foreach (var serviceComponent in Model.ServiceComponents)
+						{
+							<tr>
+								<td>@serviceComponent.Title</td>
+								<td>@serviceComponent.Subtitle</td>
+								<td>@if (!serviceComponent.IsDeleted)
+								{
+									<span class="text-success">Active</span>
+								}
+								else
+								{
+									<span class="text-danger">Deactive</span>
+								}
+								</td>
+								<td>
+									<a asp-action="details" asp-controller="servicecomponent" asp-route-id="@serviceComponent.Id" class="btn btn-info">Details</a>
+								</td>
+							</tr>
+						}
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- /.container-fluid -->

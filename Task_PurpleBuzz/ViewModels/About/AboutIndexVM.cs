@@ -6,5 +6,7 @@ namespace Task_PurpleBuzz.ViewModels.About
 	{
         public List<TeamMembers> TeamMembers { get; set; }
         public AboutBannerComponent AboutBannerComponent { get; set; }
+
+        public List<TeamMemberWFU> TeamMemberWFUs { get; set; }
     }
 }

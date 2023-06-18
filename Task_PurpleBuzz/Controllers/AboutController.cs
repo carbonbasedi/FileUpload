@@ -23,7 +23,8 @@ namespace Task_PurpleBuzz.Controllers
             var model = new AboutIndexVM
             {
                 TeamMembers = teamMembers,
-                AboutBannerComponent = aboutBannerComponent
+                AboutBannerComponent = aboutBannerComponent,
+                TeamMemberWFUs = _context.TeamMemberWFUs.ToList()
             };
 
             return View(model);

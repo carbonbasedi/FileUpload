@@ -1,5 +1,5 @@
 ﻿@using Task_PurpleBuzz.Areas.Admin.ViewModels.TeamMemberWFU
-@model TeamMemberListVM
+@model TeamMemberWFUListVM
 
 <!-- Begin Page Content -->
 <div class="container-fluid">
@@ -26,9 +26,8 @@
 						{
 							<tr>
 								<td>
-									<img class="w-25" src="~/assets/@teamMemberWFU.PhotoName">
+									<img class="w-25" src="~/assets/img/@teamMemberWFU.PhotoName">
 								</td>
-								<td>@teamMemberWFU.PhotoName</td>
 								<td>@teamMemberWFU.Name @teamMemberWFU.Surname</td>
 								<td>@teamMemberWFU.Duty</td>
 								<td>@teamMemberWFU.CreatedAt.ToString("dd.MM.yyyy HH:mm:ss")</td>

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "si0vkGQCCDUJdjosPPpUg39UuPYOiIAXdZMA7Tm2cXs=",
+  "Hash": "VLZc3YjcMjly96w2M+MbLIE6ibwOhW1fbvLf2hxYWQo=",
   "Source": "Task_PurpleBuzz",
   "BasePath": "_content/Task_PurpleBuzz",
   "Mode": "Default",
@@ -31348,12 +31348,12 @@
       "OriginalItemSpec": "wwwroot\\assets\\fonts\\boxicons.woff2"
     },
     {
-      "Identity": "C:\\Users\\rusla\\source\\repos\\Task_PurpleBuzz\\Task_PurpleBuzz\\wwwroot\\assets\\img\\5ee8c913-eb7c-4514-ba81-2daa0ef35b7c hitkem008.jpeg",
+      "Identity": "C:\\Users\\rusla\\source\\repos\\Task_PurpleBuzz\\Task_PurpleBuzz\\wwwroot\\assets\\img\\272365f2-332e-48ab-a6cb-ab0d78011046 memmedaga.jpeg",
       "SourceId": "Task_PurpleBuzz",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\rusla\\source\\repos\\Task_PurpleBuzz\\Task_PurpleBuzz\\wwwroot\\",
       "BasePath": "_content/Task_PurpleBuzz",
-      "RelativePath": "assets/img/5ee8c913-eb7c-4514-ba81-2daa0ef35b7c hitkem008.jpeg",
+      "RelativePath": "assets/img/272365f2-332e-48ab-a6cb-ab0d78011046 memmedaga.jpeg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -31362,7 +31362,24 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\assets\\img\\5ee8c913-eb7c-4514-ba81-2daa0ef35b7c hitkem008.jpeg"
+      "OriginalItemSpec": "wwwroot\\assets\\img\\272365f2-332e-48ab-a6cb-ab0d78011046 memmedaga.jpeg"
+    },
+    {
+      "Identity": "C:\\Users\\rusla\\source\\repos\\Task_PurpleBuzz\\Task_PurpleBuzz\\wwwroot\\assets\\img\\7d187e60-6775-4f17-8b27-792eef20a2fa hitkem008.jpeg",
+      "SourceId": "Task_PurpleBuzz",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\rusla\\source\\repos\\Task_PurpleBuzz\\Task_PurpleBuzz\\wwwroot\\",
+      "BasePath": "_content/Task_PurpleBuzz",
+      "RelativePath": "assets/img/7d187e60-6775-4f17-8b27-792eef20a2fa hitkem008.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\img\\7d187e60-6775-4f17-8b27-792eef20a2fa hitkem008.jpeg"
     },
     {
       "Identity": "C:\\Users\\rusla\\source\\repos\\Task_PurpleBuzz\\Task_PurpleBuzz\\wwwroot\\assets\\img\\apple-icon.png",

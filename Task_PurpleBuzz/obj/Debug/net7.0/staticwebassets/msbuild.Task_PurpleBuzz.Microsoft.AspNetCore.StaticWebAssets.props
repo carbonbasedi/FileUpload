@@ -29488,12 +29488,12 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\fonts\boxicons.woff2))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\5ee8c913-eb7c-4514-ba81-2daa0ef35b7c hitkem008.jpeg))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\272365f2-332e-48ab-a6cb-ab0d78011046 memmedaga.jpeg))">
       <SourceType>Package</SourceType>
       <SourceId>Task_PurpleBuzz</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/Task_PurpleBuzz</BasePath>
-      <RelativePath>assets/img/5ee8c913-eb7c-4514-ba81-2daa0ef35b7c hitkem008.jpeg</RelativePath>
+      <RelativePath>assets/img/272365f2-332e-48ab-a6cb-ab0d78011046 memmedaga.jpeg</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -29502,7 +29502,23 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\5ee8c913-eb7c-4514-ba81-2daa0ef35b7c hitkem008.jpeg))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\272365f2-332e-48ab-a6cb-ab0d78011046 memmedaga.jpeg))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\7d187e60-6775-4f17-8b27-792eef20a2fa hitkem008.jpeg))">
+      <SourceType>Package</SourceType>
+      <SourceId>Task_PurpleBuzz</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Task_PurpleBuzz</BasePath>
+      <RelativePath>assets/img/7d187e60-6775-4f17-8b27-792eef20a2fa hitkem008.jpeg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\7d187e60-6775-4f17-8b27-792eef20a2fa hitkem008.jpeg))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\apple-icon.png))">
       <SourceType>Package</SourceType>
